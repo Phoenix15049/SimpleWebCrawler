@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -78,7 +79,22 @@ namespace SimpleWebCrawler
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            saveFileDialog1.Filter = "HTML (*.html)|*.html";
+            saveFileDialog1.Filter = "Text file (*.txt)|*.txt";
+        }
+
+        private void Btn_htmld_Click(object sender, EventArgs e)
+        {
+            var client = new WebClient();
+
+            var text = client.DownloadString(txtboxhtmld.Text);
             
+            
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                System.IO.File.WriteAllText(saveFileDialog1.FileName, text);
+            }
+
         }
     }
 }
