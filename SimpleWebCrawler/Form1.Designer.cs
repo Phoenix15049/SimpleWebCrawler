@@ -33,6 +33,8 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.txtboxhtmld = new System.Windows.Forms.TextBox();
             this.Btn_htmld = new System.Windows.Forms.Button();
+            this.crawlLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Btn_Crawler
@@ -67,15 +69,35 @@
             this.Btn_htmld.Name = "Btn_htmld";
             this.Btn_htmld.Size = new System.Drawing.Size(197, 68);
             this.Btn_htmld.TabIndex = 3;
-            this.Btn_htmld.Text = "Crawl!";
+            this.Btn_htmld.Text = "Download!";
             this.Btn_htmld.UseVisualStyleBackColor = true;
             this.Btn_htmld.Click += new System.EventHandler(this.Btn_htmld_Click);
+            // 
+            // crawlLabel
+            // 
+            this.crawlLabel.AutoSize = true;
+            this.crawlLabel.Location = new System.Drawing.Point(8, 161);
+            this.crawlLabel.Name = "crawlLabel";
+            this.crawlLabel.Size = new System.Drawing.Size(392, 16);
+            this.crawlLabel.TabIndex = 4;
+            this.crawlLabel.Text = "This method will crawl all subpages of the url that you entering to it";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(482, 161);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(245, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "This method will download html of this url";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.crawlLabel);
             this.Controls.Add(this.Btn_htmld);
             this.Controls.Add(this.txtboxhtmld);
             this.Controls.Add(this.Weblink);
@@ -95,6 +117,8 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.TextBox txtboxhtmld;
         private System.Windows.Forms.Button Btn_htmld;
+        private System.Windows.Forms.Label crawlLabel;
+        private System.Windows.Forms.Label label1;
     }
 }
 
