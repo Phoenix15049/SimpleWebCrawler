@@ -23,7 +23,6 @@ namespace SimpleWebCrawler
         
         private void Btn_Crawler_Click(object sender, EventArgs e)
         {
-         
             string[] args = { "0", "1" };
             string url = Weblink.Text;
             Main(args, url);
