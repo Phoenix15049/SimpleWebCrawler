@@ -37,7 +37,7 @@
             // 
             // Btn_Crawler
             // 
-            this.Btn_Crawler.Location = new System.Drawing.Point(49, 346);
+            this.Btn_Crawler.Location = new System.Drawing.Point(60, 85);
             this.Btn_Crawler.Name = "Btn_Crawler";
             this.Btn_Crawler.Size = new System.Drawing.Size(197, 68);
             this.Btn_Crawler.TabIndex = 0;
@@ -48,7 +48,7 @@
             // Weblink
             // 
             this.Weblink.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Weblink.Location = new System.Drawing.Point(26, 297);
+            this.Weblink.Location = new System.Drawing.Point(37, 36);
             this.Weblink.Name = "Weblink";
             this.Weblink.Size = new System.Drawing.Size(236, 34);
             this.Weblink.TabIndex = 1;
@@ -56,14 +56,14 @@
             // txtboxhtmld
             // 
             this.txtboxhtmld.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxhtmld.Location = new System.Drawing.Point(441, 297);
+            this.txtboxhtmld.Location = new System.Drawing.Point(491, 36);
             this.txtboxhtmld.Name = "txtboxhtmld";
             this.txtboxhtmld.Size = new System.Drawing.Size(236, 34);
             this.txtboxhtmld.TabIndex = 2;
             // 
             // Btn_htmld
             // 
-            this.Btn_htmld.Location = new System.Drawing.Point(463, 346);
+            this.Btn_htmld.Location = new System.Drawing.Point(513, 85);
             this.Btn_htmld.Name = "Btn_htmld";
             this.Btn_htmld.Size = new System.Drawing.Size(197, 68);
             this.Btn_htmld.TabIndex = 3;
