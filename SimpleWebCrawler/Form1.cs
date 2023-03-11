@@ -14,8 +14,16 @@ using Abot2.Poco;
 using Serilog;
 namespace SimpleWebCrawler
 {
+
     public partial class Form1 : Form
     {
+        public string consoleText;
+
+        public Form1(string consoleText)
+        {
+            this.consoleText = consoleText ?? throw new ArgumentNullException(nameof(consoleText));
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +33,8 @@ namespace SimpleWebCrawler
         {
             string[] args = { "0", "1" };
             string url = Weblink.Text;
-            Main(args, url);
+            _ = Main(args, url);
+            
         }
 
 
@@ -35,8 +44,9 @@ namespace SimpleWebCrawler
                 .MinimumLevel.Information()
                 .WriteTo.Console()
                 .CreateLogger();
-
+            
             Log.Logger.Information("Demo starting up!");
+            
 
             await DemoSimpleCrawler(url);
             await DemoSinglePageRequest();
@@ -63,6 +73,7 @@ namespace SimpleWebCrawler
             var crawledPage = await pageRequester.MakeRequestAsync(new Uri("http://google.com"));
             Log.Logger.Information("{result}", new
             {
+                
                 url = crawledPage.Uri,
                 status = Convert.ToInt32(crawledPage.HttpResponseMessage.StatusCode)
             });
@@ -71,15 +82,15 @@ namespace SimpleWebCrawler
         private static void PageCrawlCompleted(object sender, PageCrawlCompletedArgs e)
         {
             var httpStatus = e.CrawledPage.HttpResponseMessage.StatusCode;
-            var rawPageText = e.CrawledPage.Content.Text;
+            var rawPageText = e.CrawledPage.Content.Text;//HTML
+            
         }
 
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            saveFileDialog1.Filter = "HTML (*.html)|*.html";
-            saveFileDialog1.Filter = "Text file (*.txt)|*.txt";
+            saveFileDialog1.Filter = "HTML (*.html)|*.html |Text file (*.txt)|*.txt";
         }
 
         private void Btn_htmld_Click(object sender, EventArgs e)

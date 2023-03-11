@@ -35,6 +35,7 @@
             this.Btn_htmld = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.crawlLabel = new System.Windows.Forms.Label();
+            this.mainconsole = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Btn_Crawler
@@ -91,11 +92,19 @@
             this.crawlLabel.TabIndex = 6;
             this.crawlLabel.Text = "This method will crawl all subpages of the url that you entering to it";
             // 
+            // mainconsole
+            // 
+            this.mainconsole.Location = new System.Drawing.Point(32, 270);
+            this.mainconsole.Name = "mainconsole";
+            this.mainconsole.Size = new System.Drawing.Size(664, 22);
+            this.mainconsole.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 450);
+            this.Controls.Add(this.mainconsole);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.crawlLabel);
             this.Controls.Add(this.Btn_htmld);
@@ -119,6 +128,7 @@
         private System.Windows.Forms.Button Btn_htmld;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label crawlLabel;
+        private System.Windows.Forms.TextBox mainconsole;
     }
 }
 
