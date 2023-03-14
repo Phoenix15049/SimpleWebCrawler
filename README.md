@@ -1,3 +1,4 @@
 # SimpleWebCrawler
 
-A project to simplify the process of crawling websites
+A project to simplify the process of crawling websites using C#
+
