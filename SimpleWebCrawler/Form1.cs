@@ -56,7 +56,7 @@ namespace SimpleWebCrawler
         {
             var config = new CrawlConfiguration
             {
-                MaxPagesToCrawl = 10, //Only crawl 10 pages
+                MaxPagesToCrawl = 20, //Only crawl 10 pages
                 MinCrawlDelayPerDomainMilliSeconds = 3000 //Wait this many millisecs between requests
             };
             var crawler = new PoliteWebCrawler(config);
